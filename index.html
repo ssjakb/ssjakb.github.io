@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Аккумуляторная батарея</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="body">
+<!-- ШАПКА НАЧАЛО -->
+  <div class="head"> 
+    <div class="head_section"> <!-- голова-->
+      <div class="head_item headbutton"><a onclick="slowScroll('#opis')" href="#opis">Общие сведения</a></div>
+      <div class="head_item headbutton"><a onclick="slowScroll('#akb')" href="#akb">АКБ</a></div>
+      <div class="head_item headbutton"><a onclick="slowScroll('#demon')" href="dem.html">Демонтаж и монтаж</a></div>
+      <div class="head_item headbutton"><a onclick="slowScroll('#kont')" href="#kont">Контакты</a></div>
+    </div>
+  </div>
+<!-- ШАПКА КОНЕЦ -->
+<!-- ОПИСАНИЕ -->
+<div id="opis">
+  <div class="container-opis">
+    <div class="box_opis">
+      <p>Аварийная система постоянного тока обеспечивает питание приемников, наиболее необходимых для завершения полета, в случае отказа или отключения источников питания основной системы постоянного тока. В качестве источников аварийной системы постоянного тока используются четыре <a onclick="slowScroll('#akb')" href="#akb">щелочные никель-кадмиевые аккумуляторные батареи</a>.</p>
+    </div>
+  </div>
+  </div>
+  <div id="akb">
+    <div class="container-akb">
+      <div class="box_akb">
+        <p>Щелочной никель-кадмиевый аккумулятор состоит из ламельных положительных окисно-никелевых и отрицательных кадмиевых электродов, разделенных пластиковыми сепараторами, обеспечивающими стабильной межэлектродный зазор и свободную циркуляцию электролита.</p></div>
+        <img class="imgakb" src="img/akb.jpg">
+    </div>
+  </div>
+  <div id="kont">
+    <div class="container-kont">
+      <div class="box_kont">
+        <a id="telega" target="_blank" href="https://cloud.mail.ru/public/W8zE/VU8dZQUwe">other materials</a>
+            <div>
+                <br><br><br><br><br><a id="telega" href="tg://resolve?domain=nerpa38rus">telegram</a><br><br> 
+            </div>
+      </div>
+        
+    </div>
+  </div>
+<footer id="footer">
+  <div>
+    <a onclick="slowScroll('#opis')" href="#opis">Наверх</a> <p class="font">powered by <a target="_blank" href="https://upload.wikimedia.org/wikipedia/commons/7/73/God2-Sistine_Chapel.png">god's</a> help</p>
+  </div>
+</footer>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> <!--скролл-->
+<script>
+  function slowScroll(id) {
+  $('html,body').animate({
+    scrollTop: $(id).offset().top
+    }, 500);
+  }
+
+  $(document).on("scroll", function() {
+    if($(window).scrollTop() === 0 )
+      $("header").removeClass("fixed");
+      else
+      $("header").attr("class","fixed");
+  });
+</script>    <!--скролл енд-->   
+</html>
